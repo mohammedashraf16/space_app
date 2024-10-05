@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:space_app/core/utils/customized_textfield.dart';
+import 'package:space_app/core/utils/main_text_field.dart';
 
 class RegisterScreen extends StatefulWidget {
   static const String routeName = 'RegisterScreen';
@@ -50,15 +50,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                   ),
                   const SizedBox(height: 50),
-                  CustomizedTextFormField(text: 'Name'),
+                  const BuildTextField(label: 'Name'),
                   const SizedBox(height: 27),
-                  CustomizedTextFormField(text: 'Email'),
+                  const BuildTextField(label: 'Email'),
                   const SizedBox(height: 25),
-                  CustomizedTextFormField(text: 'Password', isPassword: true),
+                  const BuildTextField(label: 'Password', isObscured: true),
                   const SizedBox(height: 25),
-                  CustomizedTextFormField(text: 'Re-Password', isPassword: true),
+                  const BuildTextField(label: 'Re-Password', isObscured: true),
                   const SizedBox(height: 25),
-                  CustomizedTextFormField(text: 'Phone'),
+                  const BuildTextField(label: 'Phone'),
                   const SizedBox(height: 25),
                   ElevatedButton(
                     onPressed: () {},
