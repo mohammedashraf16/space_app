@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:space_app/features/auth/screens/login_screen.dart';
+import 'package:space_app/features/auth/screens/register_screen.dart';
 
 
 void main (){
@@ -12,12 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        scaffoldBackgroundColor: const Color(0xff05324D)
-      ),
       initialRoute: LoginScreen.routeName,
       routes: {
-        LoginScreen.routeName: (context) => const LoginScreen()
+        LoginScreen.routeName: (context) => const LoginScreen(),
+        RegisterScreen.routeName: (context) =>  RegisterScreen(),
       },
     );
 }
