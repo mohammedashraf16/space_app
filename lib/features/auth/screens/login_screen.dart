@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:space_app/core/utils/custom_circle_avatar.dart';
 import 'package:space_app/core/utils/main_text_field.dart';
+import 'package:space_app/features/auth/screens/register_screen.dart';
 
-import '../../core/utils/custom_circle_avatar.dart';
 
 class LoginScreen extends StatelessWidget {
   static const String routeName = "login";
@@ -129,13 +130,18 @@ class LoginScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 20),
-            Text("Create a new account ?",
-              textAlign: TextAlign.center,
-              style: GoogleFonts.pressStart2p(
-              fontSize: 14,
-              color: Colors.white,
-              fontWeight: FontWeight.w400,
-            ),)
+            InkWell(
+              onTap: (){
+                Navigator.pushNamed(context, RegisterScreen.routeName);
+              },
+              child: Text("Create a new account ?",
+                textAlign: TextAlign.center,
+                style: GoogleFonts.pressStart2p(
+                fontSize: 14,
+                color: Colors.white,
+                fontWeight: FontWeight.w400,
+              ),),
+            )
           ],
         ),
       ),
